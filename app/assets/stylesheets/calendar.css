@@ -1,0 +1,129 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333333;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.schedule {
+  background-color: #ff7f50;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+/* custom.css */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.table thead th {
+  background-color: #f2f2f2;
+  color: #333333;
+  padding: 10px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.table tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #cccccc;
+}
+
+.table a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.table a:hover {
+  color: #ff7f50;
+}
+
+.thead-light {
+  background-color: #e9ecef;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+textarea.fixed-size {
+  width: 350px;
+  height: 120px;
+}
+
+.form-group .submit {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.form-group .submit input[type="submit"] {
+  background-color: #ff7f50;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-gap: 10px;
+}
+
+.calendar .day {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+.calendar .day a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.notice {
+  padding: 10px;
+  background-color: #ff7f50;
+  color: #ffffff;
+  font-weight: bold;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
