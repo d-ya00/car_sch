@@ -16,6 +16,6 @@
 </p>
 
 <%= link_to '編集', edit_blog_path(@blog) %>
-<%= link_to '消去',blog_path(@blog.id), method: :delete, data: { confirm: '本当に?' } %>
+<%= link_to '消去',blog_path(@blog.id), data: { turbo_method: :delete } %>
 <%= link_to '戻る', blogs_path %>
 </div>

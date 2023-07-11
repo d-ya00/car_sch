@@ -57,7 +57,7 @@
 <div class="col-md-8">
 <%= month_calendar events: @blogs do |date, blogs| %>
   <%= date.day %>
-
+<%#<%= link_to date.day, schedule_path(date) %>
   <% blogs.each do |blog| %>
     <div>
       <%= link_to blog.title, blog %>

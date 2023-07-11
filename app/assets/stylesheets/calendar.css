@@ -127,3 +127,9 @@ textarea.fixed-size {
   margin-bottom: 10px;
   border-radius: 4px;
 }
+
+.simple-calendar 
+ .has-events {
+    background: #98fb;
+  }
+ 
