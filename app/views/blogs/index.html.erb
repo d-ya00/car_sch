@@ -1,0 +1,68 @@
+<p id="notice"><%= notice %></p>
+
+<%= render 'blogs/header' %>
+<div class="row">
+ <div class="col-md-4">
+	 <div class="schedule">今後の予定一覧</div>
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th>タイトル</th>
+        <th>日程</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @blogs.each do |blog| %>
+        <tr>
+          <td><%= link_to blog.title, blog, class: "table-link" %></td>
+          <td><%= blog.start_time.strftime("%m-%d") %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+</div>
+
+
+
+<%= form_with(model: @blog, local: true) do |form| %>
+
+  <div class="title">
+    <div class="form-tag">タイトル</div>
+    <%= form.text_field :title %>
+  </div>
+
+
+  <div class="content">
+    <div class="form-tag">内容</div>
+    <textarea name="blog[content]" rows="5" class="fixed-size"></textarea>
+  </div>
+
+    <div class="time">
+    <div class="form-tag">時間</div>
+    <%= form.datetime_select :start_time %>
+  </div>
+
+ <div class="submit">
+  <%= form.submit "予定を追加" %>
+</div>
+<% end %>
+</div>
+
+<br>
+
+
+<br>
+<div class="col-md-8">
+<%= month_calendar events: @blogs do |date, blogs| %>
+  <%= date.day %>
+<%#<%= link_to date.day, schedule_path(date) %>
+  <% blogs.each do |blog| %>
+    <div>
+      <%= link_to blog.title, blog %>
+    </div>
+  <% end %>
+<% end %>
+</div>
+</div>
