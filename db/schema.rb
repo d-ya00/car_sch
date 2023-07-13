@@ -10,13 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_06_075024) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_11_102007) do
   create_table "blogs", charset: "utf8mb4", force: :cascade do |t|
     t.string "title"
     t.text "content"
     t.datetime "start_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "schedules", charset: "utf8mb4", force: :cascade do |t|
+    t.bigint "blog_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["blog_id"], name: "index_schedules_on_blog_id"
   end
 
   create_table "users", charset: "utf8mb4", force: :cascade do |t|
@@ -32,4 +39,5 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_06_075024) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "schedules", "blogs"
 end

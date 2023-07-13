@@ -1,7 +1,6 @@
 class SchedulesController < ApplicationController
-
   def index
-    @blogs = Blog.all
-    @blog = Blog.new
+    @schedules = Schedule.all
   end
-  
+
+end
