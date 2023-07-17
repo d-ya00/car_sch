@@ -153,6 +153,7 @@ textarea.fixed-size {
   font-size: 24px;
   color: #333;
   margin-bottom: 20px;
+  margin-top: 20px;
 }
 
 /* 入力フィールドの共通スタイル */
@@ -166,6 +167,7 @@ textarea.fixed-size {
   font-size: 16px;
   color: #555;
   margin-bottom: 5px;
+  margin-top: 5px;
 }
 
 /* 入力欄のスタイル */
@@ -207,4 +209,66 @@ textarea.fixed-size {
 .error-messages {
   color: #cc0000;
   margin-bottom: 20px;
+}
+
+ /* ログイン画面*/ 
+
+
+ .login-title {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.form-checkbox-label {
+  font-size: 14px;
+  color: #555;
+  margin-left: 5px;
+}
+
+.form-checkbox {
+  margin-right: 5px;
+}
+
+.actions {
+  text-align: center;
+}
+
+
+ /* Linkタグ*/ 
+
+ .login-container {
+  text-align: center;
+}
+
+.login-link,
+.signup-link,
+.forgot-password-link {
+  display: inline-block;
+
+  font-size: 16px;
+  color: #337ab7;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+.login-link:hover,
+.signup-link:hover,
+.forgot-password-link:hover {
+  text-decoration: underline;
 }
