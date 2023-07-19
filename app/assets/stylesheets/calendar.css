@@ -134,6 +134,48 @@ textarea.fixed-size {
   }
  
 
+  
+
+  .schedule-table {
+    border-collapse: collapse;
+  }
+  
+  .schedule-table__header,
+  .schedule-table__time,
+  .schedule-table__content {
+    border: 1px solid #ccc;
+    padding: 8px;
+  }
+  
+  .schedule-table__header {
+    font-weight: bold;
+    background-color: #f5f5f5;
+  }
+  
+  .schedule-entry {
+    margin-bottom: 8px;
+  }
+  
+  .schedule-entry__time {
+    margin-bottom: 4px;
+  }
+  
+  .schedule-table__divider td {
+    border-top: 1px solid #ccc;
+  }
+  
+  .back-link {
+    display: block;
+    margin-top: 16px;
+  }
+  
+  .no-blogs {
+    margin: 8px 0;
+    color: #999;
+  }
+  
+=======
+
 
  /* サインアップ */ 
 
@@ -274,4 +316,5 @@ textarea.fixed-size {
 }
 
  /* Linkタグ_index*/ 
+
 

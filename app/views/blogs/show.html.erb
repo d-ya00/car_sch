@@ -1,21 +1,44 @@
 <p id="notice"><%= notice %></p>
-<div class="show">
-<p>
-  <strong>タイトル</strong>
-  <%= @blog.title %>
-</p>
+<div class="schedules">
+  <h3>一日のスケジュール</h3>
+  <table class="schedule-table">
+    <thead>
+      <tr>
+        <th class="schedule-table__header">時間</th>
+        <th class="schedule-table__header">タイトル</th>
+        <th class="schedule-table__header">内容</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% (0..24).each do |hour| %>
+        <tr>
+          <td class="schedule-table__time"><%= sprintf("%02d:00", hour) %></td>
+          <td class="schedule-table__content" colspan="2">
+            <% blogs_for_hour = @blogs.select { |blog| blog.start_time&.hour == hour } %>
+            <% if blogs_for_hour.any? %>
+              <% blogs_for_hour.each do |blog| %>
+                <div class="schedule-entry">
+                  <p class="schedule-entry__time">
+                    <% if blog.start_time %>
+                      <strong><%= blog.start_time.strftime("%H:%M") %></strong>
+                    <% else %>
+                      <strong>時間未登録</strong>
+                    <% end %>
+                  </p>
+                  <p class="schedule-entry__title"><%= blog.title %></p>
+                  <p class="schedule-entry__content"><%= blog.content %></p>
+                  <%= link_to '編集', edit_blog_path(blog), class: 'edit-link' %>
+                  <%= link_to '消去', blog_path(blog), data: { turbo_method: :delete }, class: 'delete-link' %>
 
-<p>
-  <strong>内容</strong>
-  <%= @blog.content %>
-</p>
-
-<p>
-  <strong>日時</strong>
-  <%= @blog.start_time.strftime("%m-%d") %>
-</p>
-
-<%= link_to '編集', edit_blog_path(@blog) %>
-<%= link_to '消去',blog_path(@blog.id), data: { turbo_method: :delete } %>
-<%= link_to '戻る', blogs_path %>
+                </div>
+              <% end %>
+            <% else %>
+              <p class="no-blogs"></p>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= link_to '戻る', blogs_path, class: 'back-link' %>
 </div>

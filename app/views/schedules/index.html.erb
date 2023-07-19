@@ -1,0 +1,8 @@
+<h3>一日のスケジュール</h3>
+
+<% @blogs.each do |blog| %>
+  <h2><%= blog.title %></h2>
+  <p><%= blog.content %></p>
+  <p><%= blog.start_time.strftime("%Y-%m-%d %H:%M") %></p>
+  <hr>
+<% end %>

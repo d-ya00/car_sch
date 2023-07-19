@@ -5,8 +5,12 @@ class CreateBlogs < ActiveRecord::Migration[7.0]
       t.text :content
       t.datetime :start_time
       t.integer    :price
-      t.references :user,               null: false, foreign_key: true
+
+
+     
+
       t.timestamps
+      t.references :user,           null: false, foreign_key: true
     end
   end
 end
