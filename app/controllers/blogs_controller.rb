@@ -1,5 +1,9 @@
 class BlogsController < ApplicationController
+  before_action :authenticate_user!, only: :index
+  before_action :move_to_index, except: [:index, :show]
+
   def index
+    @blogs = Blog.includes(:user)
     @blogs = Blog.all
     @blog = Blog.new
   end
@@ -31,8 +35,13 @@ class BlogsController < ApplicationController
 
 
   def create
-    Blog.create(blog_parameter)
-    redirect_to blogs_path
+    @blog = current_user.blogs.build(blog_parameter)
+  
+    if @blog.save
+      redirect_to blogs_path, notice: '予定を追加しました。'
+    else
+      render :new
+    end
   end
 
   def destroy
@@ -58,6 +67,12 @@ class BlogsController < ApplicationController
 
   def blog_parameter
     params.require(:blog).permit(:title, :content, :start_time)
+  end
+
+  def move_to_index
+    unless user_signed_in?
+      redirect_to action: :index
+    end
   end
 
 end
