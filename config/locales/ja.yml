@@ -12,4 +12,5 @@ ja:
     sessions:
       user:
         already_signed_out: '既にログアウトしています。'
-      already_signed_out: '既にログアウトしています。'
+    signed_in: 'ログインしました。'
+translation missing: ja.devise.failure.user.unauthenticated
