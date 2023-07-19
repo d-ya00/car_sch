@@ -12,7 +12,6 @@ class BlogsController < ApplicationController
     @blog = Blog.new
   end
 
- 
   def show_by_date
     date = Date.parse(params[:date])
     @blogs = Blog.where(start_time: date.beginning_of_day..date.end_of_day)
@@ -20,19 +19,14 @@ class BlogsController < ApplicationController
     if @blogs.any?
       render 'show'
     else
-      redirect_to blogs_path, alert: "No blogs found for the selected date."
+      redirect_to blogs_path, alert: "選択した日に予定はありませんでした"
     end
   end
-  
-  
-
   
   def show
     @blog = Blog.find(params[:id])
     #@schedules = @blog.schedules
   end
-  
-
 
   def create
     @blog = current_user.blogs.build(blog_parameter)
