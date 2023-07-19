@@ -11,6 +11,11 @@
     <%= form.text_field :content %>
   </div>
 
+  <div class="price">
+      <div class="form-tag">費用</div>
+      <%= form.text_field :price, pattern: "[0-9]*", inputmode: "numeric" , placeholder: "半角英数字を入力" %>
+  </div>  
+
     <div class="time">
     <div class="form-tag">時間</div>
     <%= form.datetime_select :start_time %>
