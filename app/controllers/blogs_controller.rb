@@ -3,11 +3,9 @@ class BlogsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @blogs = Blog.includes(:user)
-    @blogs = Blog.all
+    @blogs = current_user.blogs.includes(:user)
     @blog = Blog.new
-    @total_expenses = Blog.where(start_time: Date.current.beginning_of_month..Date.current.end_of_month).sum(:price)
-
+    @total_expenses = current_user.blogs.where(start_time: Date.current.beginning_of_month..Date.current.end_of_month).sum(:price)
   end
   
   def new

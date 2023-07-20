@@ -1,4 +1,5 @@
-<div class="toppage">
+<div class="header">
   <h1 class="top">カレンダー</h1>
  <br>
 </div>
+<%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }, class: "logout-link" %>
