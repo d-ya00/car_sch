@@ -22,7 +22,9 @@
         <th>日程</th>
       </tr>
     </thead>
-
+   <div class="total-expenses">
+  <strong>一か月の費用合計：</strong> <%= @total_expenses %> 円
+</div>
     <tbody>
       <% @blogs.each do |blog| %>
         <tr>
