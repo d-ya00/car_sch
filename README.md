@@ -1,24 +1,25 @@
-# README
+# DB設計
+## usersテーブル
+| Column | Type | Option |
+|-|-|-|
+| id(PK) | integer | null: false |
+| name | string | null: false |
+| email | string | null: false, unique: true |
+| encrypted_password | string | null: false |
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Association
+- has_many :blogs
 
-Things you may want to cover:
+## blogssテーブル
+| Column | Type | Option |
+|-|-|-|
+| id(PK) | integer | null: false |
+| title | string | null: false |
+| content | text | 
+| price | integer | 
+| start_time | datetime | 
+| user(FK) | references | null: false, foreign_key: true |
 
-* Ruby version
+### Association
+- belongs_to :user
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

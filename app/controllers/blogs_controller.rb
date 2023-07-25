@@ -3,12 +3,15 @@ class BlogsController < ApplicationController
   before_action :move_to_index, except: [:index, :show]
 
   def index
-    @blogs = Blog.includes(:user)
-    @blogs = Blog.all
     @blog = Blog.new
-    @total_expenses = Blog.where(start_time: Date.current.beginning_of_month..Date.current.end_of_month).sum(:price)
+   # カレンダーの表示月を取得して、その月の範囲を指定して合計金額を取得
+   @start_date = params[:date].present? ? Date.parse(params[:date]).beginning_of_month : Date.current.beginning_of_month
+  @end_date = @start_date.end_of_month
+  @total_expenses = current_user.blogs.where(start_time: @start_date..@end_date).sum(:price)
 
-  end
+  # カレンダーの表示月を指定して予定データを取得
+  @blogs = current_user.blogs.where(start_time: @start_date..@end_date)
+end
   
   def new
     @blog = Blog.new

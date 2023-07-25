@@ -22,19 +22,20 @@
         <th>日程</th>
       </tr>
     </thead>
+     <tbody>
+        <% @blogs.each do |blog| %>
+          <tr>
+            <td><%= link_to blog.title, blog, class: "table-link" %></td>
+            <td><%= blog.start_time.strftime("%m-%d") %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
    <div class="total-expenses">
-  <strong>一か月の費用合計：</strong> <%= @total_expenses %> 円
+  <strong><%= @start_date.strftime('%Y年%m月') %> の合計費用：</strong> <%= @total_expenses %> 円
 </div>
-    <tbody>
-      <% @blogs.each do |blog| %>
-        <tr>
-          <td><%= link_to blog.title, blog, class: "table-link" %></td>
-          <td><%= blog.start_time.strftime("%m-%d") %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-</div>
+
+  </div>
 </div>
 
 
@@ -70,16 +71,11 @@
 </div>
 
 <br>
-
-
 <br>
+
 <div class="col-md-8">
 <%= month_calendar events: @blogs do |date, blogs| %>
-  <%#<%= date.day %>
-<%#<%= link_to date.day, schedules_path(date: date) %>
- <%= link_to date.day, show_by_date_blogs_path(date: date) %>
-
- 
+  <%= link_to date.day, show_by_date_blogs_path(date: date) %>
   <% blogs.each do |blog| %>
     <div>
       <%#<%= link_to blog.title, blog %>
