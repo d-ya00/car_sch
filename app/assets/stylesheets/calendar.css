@@ -1,3 +1,18 @@
+/* head */
+
+.header {
+  background-color: #007BFF; /* Choose your desired background color */
+  text-align: center;
+  padding: 20px 0; /* Adjust the padding as needed */
+}
+
+.top {
+  color: #FFFFFF; /* Choose your desired text color */
+  font-size: 36px; /* Adjust the font size as needed */
+  margin: 0; /* Remove any default margin */
+}
+
+
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -314,6 +329,68 @@ textarea.fixed-size {
   text-decoration: underline;
 }
 
- /* Linkタグ_index*/ 
+/* ログアウト*/ 
+
+.logout-link {
+  color: #fff;
+  background-color: #f44336;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.logout-link:hover {
+  background-color: #d32f2f;
+}
 
 
+/* Style for the form container */
+.title1, .content1, .price1, .time1, .submit1 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Style for the form tag */
+.form-tag1 {
+  font-weight: bold;
+  margin-right: 10px;
+  color: #00BFFF; /* Blue color for the form tag */
+}
+
+/* Style for the form input fields */
+.form-input1 {
+  width: 80%;
+  padding: 8px; /* Reduce padding to make it more compact */
+  border: 2px solid #00BFFF; /* Blue color for the input border */
+  border-radius: 5px;
+  font-size: 14px; /* Reduce font size for a more compact look */
+  transition: border-color 0.3s ease; /* Add a smooth transition effect on border color change */
+  color: #000000; /* Black color for the text inside input fields */
+}
+
+.form-input1::placeholder {
+  color: #999; /* Light gray placeholder color */
+}
+
+.form-input1:focus {
+  outline: none;
+  border-color: #000000; /* Black color for the input border on focus */
+}
+
+/* Style for the submit button */
+.submit-button1 {
+  background-color: #00BFFF; /* Blue color for the button background */
+  color: #FFFFFF; /* White color for the text inside the button */
+  padding: 8px 15px; /* Reduce padding to make it more compact */
+  border: none;
+  border-radius: 5px;
+  font-size: 14px; /* Reduce font size for a more compact look */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Add a smooth transition effect on background color change */
+}
+
+.submit-button1:hover {
+  background-color: #000000; /* Black color for the button on hover */
+}
