@@ -11,6 +11,7 @@ class BlogsController < ApplicationController
 
   # カレンダーの表示月を指定して予定データを取得
   @blogs = current_user.blogs.where(start_time: @start_date..@end_date)
+  #binding.pry
 end
   
   def new
