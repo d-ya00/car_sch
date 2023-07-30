@@ -1,6 +1,6 @@
-<p id="notice"><%= notice %></p>
+<p id="notice" class="notice-message"><%= notice %></p>
 <div class="schedules">
-  <h3>一日のスケジュール</h3>
+  <h3 class="schedule-heading">一日のスケジュール</h3>
   <table class="schedule-table">
     <thead>
       <tr>
@@ -28,13 +28,12 @@
                   </p>
                   <p class="schedule-entry__title"><%= blog.title %></p>
                   <p class="schedule-entry__content"><%= blog.content %></p>
-                  <%= link_to '編集', edit_blog_path(blog), class: 'edit-link' %>
+                  <%= link_to '編集', edit_blog_path(blog), class: 'edit-link2' %>
                   <%= link_to '消去', blog_path(blog), data: { turbo_method: :delete }, class: 'delete-link' %>
-
                 </div>
               <% end %>
             <% else %>
-              <p class="no-blogs"></p>
+              <p class="no-blogs">予定はありません</p>
             <% end %>
           </td>
         </tr>

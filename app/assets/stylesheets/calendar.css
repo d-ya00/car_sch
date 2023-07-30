@@ -394,3 +394,93 @@ textarea.fixed-size {
 .submit-button1:hover {
   background-color: #000000; /* Black color for the button on hover */
 }
+/* 全体のスタイル */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* 通知メッセージのスタイル */
+.notice-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+}
+
+/* スケジュール一覧のスタイル */
+.schedules {
+  margin: 20px;
+}
+
+/* スケジュール見出しのスタイル */
+.schedule-heading {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* スケジュールの表のスタイル */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* スケジュール表のヘッダーのスタイル */
+.schedule-table__header {
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: left;
+}
+
+/* スケジュールの時間のセルのスタイル */
+.schedule-table__time {
+  width: 15%;
+  background-color: #f2f2f2;
+  padding: 8px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* スケジュールの内容のセルのスタイル */
+.schedule-table__content {
+  padding: 8px;
+}
+
+/* スケジュールのエントリーのスタイル */
+.schedule-entry {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* スケジュールの時間のスタイル */
+.schedule-entry__time {
+  font-weight: bold;
+}
+
+/* スケジュールのタイトルのスタイル */
+.schedule-entry__title {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* スケジュールの内容のスタイル */
+.schedule-entry__content {
+  margin-top: 5px;
+}
+
+/* 編集リンクのスタイル */
+.edit-link2 {
+  margin-right: 5px;
+  color: #007bff;
+}
+
+/* 消去リンクのスタイル */
+.delete-link {
+  color: #dc3545;
+}
+
+/* 予定がない場合のスタイル */
+.no-blogs {
+  color: #999;
+  font-style: italic;
+}
