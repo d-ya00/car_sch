@@ -28,9 +28,10 @@
         <% end %>
       </tbody>
     </table>
-   <div class="total-expenses">
-  <strong><%= @start_date.strftime('%Y年%m月') %> の合計費用：</strong> <%= @total_expenses %> 円
+    <div class="total-expenses">
+  <strong><%= @start_date.strftime('%Y年%m月') %> の合計費用：</strong> <span id="total-expenses-value"><%= @total_expenses %> 円</span>
 </div>
+
 
   </div>
 </div>
