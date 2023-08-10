@@ -23,3 +23,14 @@
 ### Association
 - belongs_to :user
 
+## アプリケーション名
+CAR SCH
+
+## アプリケーション概要
+車関連に特化したカレンダー
+
+## URL
+https://car-sch.onrender.com
+
+## 洗い出した要件
+https://docs.google.com/document/d/1scBKBNW75nYYJ4hY-fMdPltl5DvpJezRzgGWNsI_fdk/edit#heading=h.2vrpmk5apt5
