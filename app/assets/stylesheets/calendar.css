@@ -1,27 +1,33 @@
 /* head */
 
 .header {
-  background-color: #007BFF; /* Choose your desired background color */
-  text-align: center;
-  padding: 20px 0; /* Adjust the padding as needed */
+  background-color: #555;
+  display: flex;
+  justify-content: space-between; /* 要素を左右に均等に配置 */
+  align-items: center; /* 垂直方向の中央揃え */
+  height: 80px; 
 }
 
 .top {
-  color: #FFFFFF; /* Choose your desired text color */
-  font-size: 36px; /* Adjust the font size as needed */
-  margin: 0; /* Remove any default margin */
+  color: #FFFFFF;
+  font-size: 36px;
+  margin: 0;
 }
 
-/* ログアウト*/ 
+.title-logo {
+  width: 300px; /* タイトル画像を横に長くするために値を増やす */
+  max-height: 150px;
+  margin: 0 auto;
+}
 
 .logout-link {
-  color: #fff;
-  background-color: #f44336;
+  color: #b6b6b6;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;
   font-size: 16px;
   text-align: right;
+  margin-top: 20px;
 }
 
 
@@ -46,7 +52,7 @@ h1 {
 }
 
 .schedule {
-  background-color: #ff7f50;
+  background-color: #3a3a3a;
   color: #ffffff;
   font-size: 18px;
   padding: 10px;
