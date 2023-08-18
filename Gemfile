@@ -78,3 +78,8 @@ group :production do
   gem 'pg'
 end
 gem 'pry-rails'
+gem "importmap-rails"
+
+gem "turbo-rails"
+
+gem "stimulus-rails"
