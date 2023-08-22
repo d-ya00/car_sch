@@ -1,4 +1,4 @@
-
+<%= render 'blogs/header' %>
 <h2 class="signup-title">Sign up</h2>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { class: "signup-form" }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
